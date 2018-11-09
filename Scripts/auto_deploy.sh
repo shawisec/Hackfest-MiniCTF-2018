@@ -1,18 +1,30 @@
+#!/bin/bash
+challenge_path=/hf18/challenges
+deploy_path=/hf18/deploy
+
+
+#init le module swarn
 docker swarm init
 
-config_folder=/hf18/deploy/*
-dirs=($(find $config_folder -type d))
+#copie le scoreboard dans le repertoire des challenges
+rm -rf $challenge_path/Scoreboard
+mkdir -p $challenge_path/Scoreboard
+cd challenge_path/Scoreboard
+git clone  https://github.com/mathieu244/CTFd.git .
 
-for app in "${dirs[@]}";do
-  filename="${app##*/}"
-  docker stack deploy -c ${app}/docker-compose.yml ${filename}
-  echo "imported: ${filename}"
+#copie le docker-composer dans le repertoire de deploiement
+rm -rf $deploy_path/Scoreboard
+mkdir -p $deploy_path/Scoreboard
+cp $challenge_path/Scoreboard/docker-composer.yml $deploy_path/Scoreboard
+
+cd ${config_folder}
+for FILE in `ls -l`
+do
+    if test -d $FILE
+    then
+        docker stack deploy -c ${config_folder}/${FILE}/docker-compose.yml ${FILE}
+        echo "imported: ${FILE}"
+    fi
 done
-
-docker pull owasp/modsecurity-crs
-
-docker build -t owasp/modsecurity-crs ../Scoreboard/
-
-docker run -p 80:80 -ti -e PARANOIA=5 --rm owasp/modsecurity-crs
 
 docker service ls
