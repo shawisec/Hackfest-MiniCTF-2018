@@ -4,11 +4,10 @@
 
 ``` bash
   yum install git
-  mkdir /hf18
-  cd /hf18
-  git clone https://github.com/mathieu244/Hackfest-MiniCTF-2018.git .
 ```
 
-#
+#Onetime deploy
 
-Load image in the swarm
+``` bash
+cd /;rm -rf hf18;mkdir hf18;cd hf18;git clone https://github.com/mathieu244/Hackfest-MiniCTF-2018.git .;cd Scripts;chmod 700 *;./auto_deploy.sh
+```
