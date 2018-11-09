@@ -9,7 +9,7 @@ docker swarm init
 #copie le scoreboard dans le repertoire des challenges
 rm -rf ${challenge_path}/Scoreboard
 mkdir -p ${challenge_path}/Scoreboard
-cd challenge_path/Scoreboard
+cd ${challenge_path}/Scoreboard
 git clone  https://github.com/mathieu244/CTFd.git .
 
 #copie le docker-composer dans le repertoire de deploiement
