@@ -15,7 +15,7 @@ git clone  https://github.com/mathieu244/CTFd.git .
 #copie le docker-composer dans le repertoire de deploiement
 rm -rf ${deploy_path}/Scoreboard
 mkdir -p ${deploy_path}/Scoreboard
-cp ${challenge_path}/Scoreboard/docker-composer.yml ${deploy_path}/Scoreboard
+cp ${challenge_path}/Scoreboard/docker-compose.yml ${deploy_path}/Scoreboard
 
 cd ${config_folder}
 for FILE in `ls -l`
