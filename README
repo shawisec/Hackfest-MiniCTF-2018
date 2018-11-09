@@ -1,0 +1,14 @@
+# How to use with VULTR Centos 7 Docker image
+
+# installations
+
+``` bash
+  yum install git
+  mkdir /hf18
+  cd /hf18
+  git clone https://github.com/mathieu244/Hackfest-MiniCTF-2018.git .
+```
+
+#
+
+Load image in the swarm
