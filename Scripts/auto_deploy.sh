@@ -17,12 +17,12 @@ rm -rf ${deploy_path}/Scoreboard
 mkdir -p ${deploy_path}/Scoreboard
 cp ${challenge_path}/Scoreboard/docker-compose.yml ${deploy_path}/Scoreboard
 
-cd ${config_folder}
+cd ${deploy_path}
 for FILE in `ls -l`
 do
     if test -d $FILE
     then
-        docker stack deploy -c ${config_folder}/${FILE}/docker-compose.yml ${FILE}
+        docker stack deploy -c ${deploy_path}/${FILE}/docker-compose.yml ${FILE}
         echo "imported: ${FILE}"
     fi
 done
