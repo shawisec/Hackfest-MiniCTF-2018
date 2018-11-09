@@ -1,6 +1,8 @@
-web:
-  image: php:7.0-apache
-  ports:
-    - "0.0.0.0:5004:80"
-  volumes:
-    - /hf18/challenges/upload-1/web/:/var/www/html
+version: '3'
+services:
+  web:
+    image: php:7.0-apache
+    ports:
+      - "0.0.0.0:5004:80"
+    volumes:
+      - /hf18/challenges/upload-1/web/:/var/www/html
