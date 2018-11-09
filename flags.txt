@@ -1,0 +1,129 @@
+HTML 1
+5
+Find the flag in the source.
+
+http://owasp.zhack.ca:5015/
+
+---
+
+LFI 1
+10
+Find the flag in the "index.php" file.
+
+http://owasp.zhack.ca:5000/
+
+---
+
+Command Injection 1
+10
+Find the flag in the "index.php" file.
+
+http://owasp.zhack.ca:5001/
+
+---
+
+Direct Object Reference 1
+10
+Find a way to view the admin profile.
+
+http://owasp.zhack.ca:5002/
+
+---
+
+SQL 1
+10
+Find a way to read the flag from the "flag" table.
+
+http://owasp.zhack.ca:5003/
+
+---
+
+File Upload 1
+10
+Find a way to read the flag in "index.php".
+
+http://owasp.zhack.ca:5004/
+
+---
+
+File Upload 2
+10
+Find a way to read the flag in "index.jsp"
+
+http://owasp.zhack.ca:5007/java-2/
+
+---
+
+XXE 1
+15
+Find a way to read the flag in "index.php".
+
+http://owasp.zhack.ca:5005/
+
+---
+
+Privilege Escalation 1
+15
+Find a way to read "/home/admin/flag.txt".
+
+To connect : nc owasp.zhack.ca 5010
+
+To view sudo permission : sudo -l
+
+---
+
+Privilege Escalation 2
+15
+Find a way to read "/home/admin/flag.txt".
+
+To connect : nc owasp.zhack.ca 5011
+
+To view sudo permission : sudo -l
+
+---
+
+Java Deserialization 1
+25
+Find a way to read the flag in "index.jsp".
+
+http://owasp.zhack.ca:5006/java-1/
+
+---
+
+LFI 2
+25
+Find a way to read the file "index.php".
+
+http://owasp.zhack.ca:5016/
+
+Hint : Find a way to abuse some quirks of the "file" protocol.
+
+---
+FINAL
+---
+
+Crypto 1
+15
+Find a way to get the flag from the store.
+
+http://owasp.zhack.ca:5008/
+
+---
+
+Privilege Escalation 3
+15
+Find a way to read "/home/admin/flag.txt".
+
+To connect : nc owasp.zhack.ca 5012
+
+To view sudo permission : sudo -l
+
+---
+
+Reverse 1
+15
+Find the flag from the "main" binary.
+
+To connect :
+
+ssh challenge@owasp.zhack.ca -p 5013 (password: password)
