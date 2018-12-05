@@ -15,8 +15,9 @@ docker swarm init
 rm -rf ${scoreboard_root_path}/Scoreboard
 mkdir -p ${scoreboard_root_path}/Scoreboard
 cd ${scoreboard_root_path}/Scoreboard
+python -c "import os; f=open('.ctfd_secret_key', 'a+'); f.write(os.urandom(64)); f.close()"
 git clone  https://github.com/mathieu244/CTFd.git .
-docker-compose up
+docker-compose up -d
 
 # Deploy all challenges
 cd ${deploy_path}
