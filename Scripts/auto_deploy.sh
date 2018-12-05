@@ -1,22 +1,24 @@
 #!/bin/bash
-challenge_path=/hf18/challenges
+scoreboard_root_path=/hf18
 deploy_path=/hf18/deploy
 
+# Installation des dependances version CENTOS 7
+yum install -y epel-release
+yum install -y python-pip
+pip install docker-compose
+pip install --upgrade pip
 
 #init le module swarn
 docker swarm init
 
-#copie le scoreboard dans le repertoire des challenges
-rm -rf ${challenge_path}/Scoreboard
-mkdir -p ${challenge_path}/Scoreboard
-cd ${challenge_path}/Scoreboard
+#Deploy CTFD Scoreboard
+rm -rf ${scoreboard_root_path}/Scoreboard
+mkdir -p ${scoreboard_root_path}/Scoreboard
+cd ${scoreboard_root_path}/Scoreboard
 git clone  https://github.com/mathieu244/CTFd.git .
+docker-compose up
 
-#copie le docker-composer dans le repertoire de deploiement
-rm -rf ${deploy_path}/Scoreboard
-mkdir -p ${deploy_path}/Scoreboard
-cp ${challenge_path}/Scoreboard/docker-compose.yml ${deploy_path}/Scoreboard
-
+# Deploy all challenges
 cd ${deploy_path}
 for FILE in `ls -l`
 do
