@@ -24,7 +24,7 @@ python generate_flags.py
 mv ${scoreboard_root_path}/Scripts/challenges ${scoreboard_root_path}/Scoreboard/migrations
 
 # INSERT INFO AND FLAGS TO CTFD (Scoreboard)
-
+cd ${scoreboard_root_path}/Scoreboard
 docker-compose up -d
 
 # Deploy all challenges
