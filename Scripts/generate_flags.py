@@ -10,7 +10,7 @@ from random import *
 min_char = 20
 max_char = 25
 allchar = string.ascii_letters + string.digits
-
+hostname = 'ctf.shawisec.ca'
 challenges = []
 
 for filepath in glob.iglob('../challenges/*'):
@@ -62,6 +62,14 @@ os.mkdir('db')
 
 with open('db/challenges.json', 'w') as challenge_files:
     challenge_files.write("{\"count\": "+str(len(imported_challenges))+ ", \"results\": " +json.dumps(imported_challenges) + ", \"meta\": {}}")
+
+# Replace all $(HOST) in challenges
+with open('db/challenges.json', 'r') as config_file:
+    filedata = config_file.read()
+    filedata = re.sub(r"\$\(HOST\)", hostname, filedata)
+
+with open('db/challenges.json', 'w') as file:
+    file.write(filedata)
 
 with open('db/keys.json', 'w') as keys_files:
     keys_files.write("{\"count\": "+str(len(imported_keys))+ ", \"results\": " +json.dumps(imported_keys) + ", \"meta\": {}}")
