@@ -94,7 +94,7 @@ def zipdir(path, ziph):
         for file in files:
             ziph.write(os.path.join(root, file))
 
-zipf = zipfile.ZipFile('challenges.zip', 'w', zipfile.ZIP_DEFLATED)
+zipf = zipfile.ZipFile('shawisec.zip', 'w', zipfile.ZIP_DEFLATED)
 zipdir('db/', zipf)
 zipf.close()
 
