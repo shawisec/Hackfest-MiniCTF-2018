@@ -72,6 +72,12 @@ with open('db/files.json', 'w') as file:
 with open('db/tags.json', 'w') as file:
     file.write('')
 
+with open('db/awards.json', 'w') as file:
+    file.write('')
+
+with open('db/tracking.json', 'w') as file:
+    file.write('')
+
 with open('db/hints.json', 'w') as file:
     file.write('')
 
