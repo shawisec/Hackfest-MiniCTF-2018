@@ -17,6 +17,12 @@ mkdir -p ${scoreboard_root_path}/Scoreboard
 cd ${scoreboard_root_path}/Scoreboard
 git clone  https://github.com/mathieu244/CTFd.git .
 python -c "import os; f=open('.ctfd_secret_key', 'a+'); f.write(os.urandom(64)); f.close()"
+mv ${scoreboard_root_path}/Scripts/challenges ${scoreboard_root_path}/Scoreboard/migrations
+
+python generate_flags.py
+
+# INSERT INFO AND FLAGS TO CTFD (Scoreboard)
+
 docker-compose up -d
 
 # Deploy all challenges
