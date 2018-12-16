@@ -24,8 +24,8 @@ python generate_flags.py
 mv shawisec.zip ${scoreboard_root_path}/Scoreboard/shawisec.zip
 
 cd ${scoreboard_root_path}/Scoreboard
-#docker-compose up -d
-docker stack deploy -c ${scoreboard_root_path}/Scoreboard/docker-compose.yml Scoreboard
+docker-compose up -d
+#docker stack deploy -c ${scoreboard_root_path}/Scoreboard/docker-compose.yml Scoreboard
 
 # Deploy all challenges
 cd ${deploy_path}
