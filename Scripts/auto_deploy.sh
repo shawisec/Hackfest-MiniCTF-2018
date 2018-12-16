@@ -18,6 +18,7 @@ cd ${scoreboard_root_path}/Scoreboard
 git clone  https://github.com/mathieu244/CTFd.git .
 python -c "import os; f=open('.ctfd_secret_key', 'a+'); f.write(os.urandom(64)); f.close()"
 
+cd ${scoreboard_root_path}/Scripts
 python generate_flags.py
 
 mv ${scoreboard_root_path}/Scripts/challenges ${scoreboard_root_path}/Scoreboard/migrations
