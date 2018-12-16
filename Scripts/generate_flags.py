@@ -31,7 +31,7 @@ for filepath in glob.iglob('../challenges/*'):
         filedata = file.read()
 
     with open(filepath+'/'+config_json['flag_file'], 'w') as file:
-        filedata = re.sub(r"FLAG-\w+", config_json['flag'], filedata)
+        filedata = re.sub(r"FLAG-\w+", config_json['flags'], filedata)
         file.write(filedata)
         print('updated file: '+filepath+'/'+config_json['flag_file'])
 
