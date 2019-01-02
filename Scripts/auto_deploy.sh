@@ -17,7 +17,15 @@ mkdir -p ${scoreboard_root_path}/Scoreboard
 cd ${scoreboard_root_path}/Scoreboard
 git clone  https://github.com/mathieu244/CTFd.git .
 python -c "import os; f=open('.ctfd_secret_key', 'a+'); f.write(os.urandom(64)); f.close()"
+
+cd ${scoreboard_root_path}/Scripts
+python generate_flags.py
+#copy le setup dans le scoreboard
+mv shawisec.zip ${scoreboard_root_path}/Scoreboard/shawisec.zip
+
+cd ${scoreboard_root_path}/Scoreboard
 docker-compose up -d
+#docker stack deploy -c ${scoreboard_root_path}/Scoreboard/docker-compose.yml Scoreboard
 
 # Deploy all challenges
 cd ${deploy_path}
