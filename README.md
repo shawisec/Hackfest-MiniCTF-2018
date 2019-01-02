@@ -1,6 +1,6 @@
 # Installation sur un Centos 7 vierge
 
-# Configuration
+## Configuration
 
 ``` bash
   yum -y upgrade
@@ -12,7 +12,7 @@
   systemctl enable docker
 ```
 
-# Déploiement
+## Déploiement
 
 ``` bash
 cd /;rm -rf hf18;mkdir hf18;cd hf18;git clone https://github.com/shawisec/Hackfest-MiniCTF-2018.git .;cd Scripts;chmod 700 *;./auto_deploy.sh
