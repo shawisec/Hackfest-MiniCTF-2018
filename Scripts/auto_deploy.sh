@@ -23,8 +23,8 @@ python generate_flags.py
 #copy le setup dans le scoreboard
 mv shawisec.zip ${scoreboard_root_path}/Scoreboard/shawisec.zip
 
-cd ${scoreboard_root_path}/Scoreboard
-docker-compose up -d
+#cd ${scoreboard_root_path}/Scoreboard
+docker-compose -f ${scoreboard_root_path}/Scoreboard/docker-compose.yml up -d
 #docker stack deploy -c ${scoreboard_root_path}/Scoreboard/docker-compose.yml Scoreboard
 
 # Deploy all challenges
@@ -34,7 +34,7 @@ do
     if test -d $FILE
     then
         #docker stack deploy -c ${deploy_path}/${FILE}/docker-compose.yml ${FILE}
-        cd ${deploy_path}/${FILE};docker-compose up -d
+        docker-compose -f ${deploy_path}/${FILE}/docker-compose.yml up -d
         echo "imported: ${FILE}"
     fi
 done

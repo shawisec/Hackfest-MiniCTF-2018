@@ -4,10 +4,9 @@ dirs=($(find $config_folder -type d))
 
 for app in "${dirs[@]}";do
   filename="${app##*/}"
-  docker rm ${filename}
+  id=(docker ps -aqf "name=${filename}")
+  docker stop ${id}
   echo "removed: ${filename}"
 done
 
-docker service ls
-
-docker swarm leave --force
+docker ps
