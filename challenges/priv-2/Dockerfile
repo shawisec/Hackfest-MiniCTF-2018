@@ -20,4 +20,4 @@ RUN chown root:admin /home/admin/flag.txt
 
 COPY docker.sh /root/docker.sh
 COPY launch.sh /root/launch.sh
-RUN chmod 700 /root
+RUN chmod -R 700 /root
