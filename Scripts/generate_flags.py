@@ -10,7 +10,7 @@ from random import *
 min_char = 20
 max_char = 25
 allchar = string.ascii_letters + string.digits
-hostname = 'ctf.shawisec.ca'
+hostname = '0x02.shawisec.ca'
 challenges = []
 
 for filepath in glob.iglob('../challenges/*'):
