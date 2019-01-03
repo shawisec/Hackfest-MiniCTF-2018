@@ -1,7 +1,8 @@
 version: '3'
 services:
-  ssh:
-    image: hf18-reverse-1
+  reverse-1:
+    #image: hf18-reverse-1
+    build: /hf18/challenges/reverse-1
     ports:
       - "0.0.0.0:5013:22"
     cap_add:
