@@ -9,7 +9,7 @@ RUN echo "export VISIBLE=now" >> /etc/profile
 # Target victim of the challenge
 RUN useradd admin
 RUN apt-get update --fix-missing
-RUN apt-get install -y sudo vim
+RUN apt-get install -y sudo vim socat
 
 # Faulty permission
 COPY challenge.sh /opt/challenge.sh

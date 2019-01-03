@@ -9,7 +9,7 @@ RUN echo "export VISIBLE=now" >> /etc/profile
 # Target victim of the challenge
 RUN useradd admin
 RUN apt-get update
-RUN apt-get install -y sudo vim openssl
+RUN apt-get install -y sudo vim openssl socat
 
 # Faulty permission
 RUN echo "challenge ALL=(admin) NOPASSWD: /usr/bin/openssl" >> /etc/sudoers

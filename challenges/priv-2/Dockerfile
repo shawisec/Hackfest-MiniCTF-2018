@@ -9,7 +9,7 @@ RUN echo "export VISIBLE=now" >> /etc/profile
 # Target victim of the challenge
 RUN useradd admin
 RUN apt-get update --fix-missing
-RUN apt-get install -y sudo vim
+RUN apt-get install -y sudo vim socat
 
 # Faulty permission
 RUN echo "challenge ALL=(admin) NOPASSWD: /usr/bin/find" >> /etc/sudoers
