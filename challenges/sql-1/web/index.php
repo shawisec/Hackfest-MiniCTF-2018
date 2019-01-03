@@ -1,5 +1,5 @@
 <?php
-  $db = new PDO('sqlite:db/a86f88dcfcd2d020296f2bbd7283dd23.db');
+  $db = new PDO('sqlite:db/ag86f88dcfcd2d020296f2bbd7283dd23.db');
 
   // Setup
   $db->query('CREATE TABLE IF NOT EXISTS items (name TEXT, description TEXT); ');
@@ -17,7 +17,7 @@
   $count = $result->fetch(PDO::FETCH_NUM)[0];
 
   if ($count == 0) {
-    $db->query("INSERT INTO flag VALUES ('FLAG-8c0f78bd9f65fb6b2d553ae30db6e612');");
+    $db->query("INSERT INTO flag VALUES ('FLAG-z3vuF9H4OgvHS00kQvkNH');");
   }
 
   $sql = '';
@@ -27,7 +27,7 @@
     $query = str_replace(";", "", $_POST['search']);
     $sql = 'SELECT * FROM items WHERE name LIKE "%' . $query . '%"';
     $result = $db->query($sql);
-    
+
     while (($res = $result->fetch(PDO::FETCH_ASSOC)) !== false) {
       $items[] = $res;
     }
@@ -56,14 +56,14 @@
           <tr>
             <th>Name</th><th>Description</th>
           </tr>
-          <?php 
+          <?php
             foreach ($items as $val) {
           ?>
             <tr>
               <td><?php echo $val['name'] ?></td>
               <td><?php echo $val['description'] ?></td>
             </tr>
-          <?php 
+          <?php
             }
           ?>
         </table>
