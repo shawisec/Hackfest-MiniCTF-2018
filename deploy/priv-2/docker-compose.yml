@@ -5,6 +5,4 @@ services:
     ports:
       - "5011:5011"
     tty: true
-    volumes:
-      - /hf18/challenges/priv-2/:/root/
     entrypoint: /root/launch.sh

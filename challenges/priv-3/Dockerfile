@@ -20,4 +20,6 @@ RUN echo "FLAG-994a0a307622f6ecea53bd05ecf432da" >> /home/admin/flag.txt
 RUN chmod 640 /home/admin/flag.txt
 RUN chown root:admin /home/admin/flag.txt
 
-RUN chmod 700 /root
+COPY docker.sh /root/docker.sh
+COPY launch.sh /root/launch.sh
+RUN chmod -R 700 /root
