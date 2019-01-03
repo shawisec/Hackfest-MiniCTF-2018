@@ -1,6 +1,6 @@
 version: "3"
 services:
-  priv1:
+  priv3:
     build: /hf18/challenges/priv-3/
     ports:
       - "5012:5012"
