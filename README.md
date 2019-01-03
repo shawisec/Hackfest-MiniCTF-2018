@@ -1,6 +1,6 @@
-# How to use with VULTR Centos 7 Docker image
+# Installation sur un Centos 7 vierge
 
-# installations des requis sur un Système vide
+## Configuration
 
 ``` bash
   yum -y upgrade
@@ -12,8 +12,8 @@
   systemctl enable docker
 ```
 
-#Onetime deploy
+## Déploiement
 
 ``` bash
-cd /;rm -rf hf18;mkdir hf18;cd hf18;git clone https://github.com/mathieu244/Hackfest-MiniCTF-2018.git .;cd Scripts;chmod 700 *;./auto_deploy.sh
+cd /;rm -rf hf18;mkdir hf18;cd hf18;git clone https://github.com/shawisec/Hackfest-MiniCTF-2018.git .;cd Scripts;chmod 700 *;./auto_deploy.sh
 ```
