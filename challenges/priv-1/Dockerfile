@@ -18,3 +18,4 @@ RUN echo "FLAG-ede3070e08a9d904509a7e8be3a58516" >> /home/admin/flag.txt
 RUN chmod 640 /home/admin/flag.txt
 RUN chown root:admin /home/admin/flag.txt
 
+RUN chmod 700 /root

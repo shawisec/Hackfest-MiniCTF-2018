@@ -1,0 +1,10 @@
+version: "3"
+services:
+  priv1:
+    build: /hf18/challenges/priv-3/
+    ports:
+      - "5012:5012"
+    tty: true
+    volumes:
+      - /hf18/challenges/priv-3/:/root/
+    entrypoint: /root/launch.sh
