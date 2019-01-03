@@ -1,5 +1,5 @@
 <?php
-  $db = new PDO('sqlite:db/ag86f88dcfcd2d020296f2bbd7283dd23.db');
+  $db = new PDO('sqlite:db/bbba86f88dcfcd2d020296f2bbd7283dd23.db');
 
   // Setup
   $db->query('CREATE TABLE IF NOT EXISTS items (name TEXT, description TEXT); ');
