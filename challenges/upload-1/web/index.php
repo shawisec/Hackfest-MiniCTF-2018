@@ -6,7 +6,7 @@
     mkdir($uploaddir);
     $uploadfile = $uploaddir . basename($_FILES['file']['name']);
     if (move_uploaded_file($_FILES['file']['tmp_name'], $uploadfile)) {
-      $text = 'Image uploaded to "/upload-1/uploads/' . $folderid . '/' . basename($_FILES['file']['name']). '".';
+      $text = 'Image uploaded to "/uploads/' . $folderid . '/' . basename($_FILES['file']['name']). '".';
     } else {
       $error = 'Error while uploading file.';
     }
