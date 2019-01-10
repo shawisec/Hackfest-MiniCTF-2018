@@ -27,9 +27,6 @@ mv shawisec.zip ${scoreboard_root_path}/Scoreboard/shawisec.zip
 docker-compose -f ${scoreboard_root_path}/Scoreboard/docker-compose.yml up -d
 #docker stack deploy -c ${scoreboard_root_path}/Scoreboard/docker-compose.yml Scoreboard
 
-# only for sql-1 challenge (reset database folder et donne les permission decriture pour apache)
-rm -rf ${challenge_path}/sql-1/web/db;mkdir ${challenge_path}/sql-1/web/db;chmod -R 777 ${challenge_path}/sql-1/web/db; touch ${challenge_path}/sql-1/web/db/index.php;
-
 # Deploy all challenges
 cd ${deploy_path}
 for FILE in `ls -l`
