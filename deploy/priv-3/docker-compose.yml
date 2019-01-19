@@ -2,6 +2,7 @@ version: "3"
 services:
   priv3:
     build: /hf18/challenges/priv-3/
+    restart: always
     ports:
       - "5012:5012"
     tty: true

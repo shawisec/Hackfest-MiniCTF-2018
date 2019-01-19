@@ -34,7 +34,7 @@ do
     if test -d $FILE
     then
         #docker stack deploy -c ${deploy_path}/${FILE}/docker-compose.yml ${FILE}
-        docker-compose -f ${deploy_path}/${FILE}/docker-compose.yml up -d
+        docker-compose -f ${deploy_path}/${FILE}/docker-compose.yml up --build -d
         echo "imported: ${FILE}"
     fi
 done

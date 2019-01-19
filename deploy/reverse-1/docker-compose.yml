@@ -3,6 +3,7 @@ services:
   reverse-1:
     #image: hf18-reverse-1
     build: /hf18/challenges/reverse-1
+    restart: always
     ports:
       - "0.0.0.0:5013:22"
     cap_add:
