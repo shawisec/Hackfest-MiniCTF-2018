@@ -8,8 +8,21 @@
   <body>
 
   	<%
-		// FLAG-27b0398705517a9e0a4caba46b3c36be
-  		if (request.getParameter("payload") != null) {
+        // FLAG-27b0398705517a9e0a4caba46b3c36be
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        // Pas de chance! Ce que tu cherches se trouve plus haut dans le code ;)
+        if (request.getParameter("payload") != null) {
   			byte[] payload = java.util.Base64.getDecoder().decode(request.getParameter("payload"));
   			ObjectInputStream ois = new ObjectInputStream(new ByteArrayInputStream(payload));
   	%>
